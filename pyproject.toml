@@ -1,17 +1,25 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
 [project]
 name = "drf-crypto"
-authors = [{ name = "Xurvan" }]
+version = "0.1.0"
+description = "Provide crypto payment essential to the drf-shop"
+authors = [
+    { name = "Xurvan", email = "xurvan@tutanota.com" },
+]
+dependencies = [
+    "drf-shop>=0.1.0",
+]
+requires-python = ">=3.10"
 readme = "README.md"
-license = { file = "LICENSE" }
-classifiers = ["License :: OSI Approved :: Apache Software License"]
-dynamic = ["version", "description"]
+license = { text = "Apache-2.0" }
+[project.optional-dependencies]
 
-[project.urls]
-Source = "https://github.com/xanigo/drf-crypto"
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
 
-[tool.flit.module]
-name = "drf_crypto"
+[tool]
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "pre-commit>=2.20.0",
+]
