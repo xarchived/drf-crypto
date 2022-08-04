@@ -6,7 +6,7 @@ authors = [
     { name = "Xurvan", email = "xurvan@tutanota.com" },
 ]
 dependencies = [
-    "drf-shop>=0.1.0",
+    "drf-shop>=0.1.1",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
