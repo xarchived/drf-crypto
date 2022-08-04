@@ -12,6 +12,9 @@ readme = "README.md"
 license = { file = "LICENSE" }
 dynamic = ["version"]
 
+[project.urls]
+source = "https://github.com/xanigo/drf-crypto"
+
 [project.optional-dependencies]
 dev = [
     "pre-commit>=2.20.0",
