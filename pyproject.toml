@@ -10,7 +10,7 @@ dependencies = [
 ]
 requires-python = ">=3.10"
 readme = "README.md"
-license = { text = "Apache-2.0" }
+license = { file = "LICENSE" }
 [project.optional-dependencies]
 
 [build-system]
