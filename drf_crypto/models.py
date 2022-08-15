@@ -70,6 +70,13 @@ class Transaction(BaseAbstractModel):
         decimal_places=AMOUNT_DECIMAL_PLACES,
     )
     transaction_hash: TextField = TextField()
+    currency: ForeignKey = ForeignKey(
+        to=Currency,
+        on_delete=RESTRICT,
+        related_name="transactions",
+        db_index=True,
+    )
+    block_date: DateTimeField = DateTimeField()
 
     def __str__(self) -> str:
         return str(self.transaction_hash)
